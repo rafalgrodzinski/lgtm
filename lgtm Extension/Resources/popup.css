@@ -3,13 +3,22 @@
 }
 
 body {
-    width: 100px;
-    padding: 10px;
-
-    font-family: system-ui;
-    text-align: center;
+    width: 300px;
 }
 
-@media (prefers-color-scheme: dark) {
-    /* Dark Mode styles go here. */
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 8px;
+    row-gap: 8px;
+    align-content: space-between;
+}
+
+.element {
+    width: 100%;
+    margin: auto auto;
+}
+
+.element:hover {
+    width: 110%;
 }
