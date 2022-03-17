@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CE2FB6327D9CB4A00C97216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */; };
+		3CE2FB6727D9CB4A00C97216 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6527D9CB4A00C97216 /* Main.html */; };
+		3CE2FB6927D9CB4A00C97216 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6827D9CB4A00C97216 /* Icon.png */; };
+		3CE2FB6B27D9CB4A00C97216 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6A27D9CB4A00C97216 /* Style.css */; };
+		3CE2FB6D27D9CB4A00C97216 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6C27D9CB4A00C97216 /* Script.js */; };
+		3CE2FB6F27D9CB4A00C97216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */; };
+		3CE2FB7227D9CB4A00C97216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB7027D9CB4A00C97216 /* Main.storyboard */; };
+		3CE2FB7427D9CB4C00C97216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */; };
+		3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CE2FB8127D9CB4C00C97216 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */; };
+		3CE2FB8427D9CB4C00C97216 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8327D9CB4C00C97216 /* _locales */; };
+		3CE2FB8627D9CB4C00C97216 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8527D9CB4C00C97216 /* images */; };
+		3CE2FB8827D9CB4C00C97216 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8727D9CB4C00C97216 /* manifest.json */; };
+		3CE2FB8A27D9CB4C00C97216 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8927D9CB4C00C97216 /* background.js */; };
+		3CE2FB8C27D9CB4C00C97216 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8B27D9CB4C00C97216 /* content.js */; };
+		3CE2FB8E27D9CB4C00C97216 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8D27D9CB4C00C97216 /* popup.html */; };
+		3CE2FB9027D9CB4C00C97216 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8F27D9CB4C00C97216 /* popup.css */; };
+		3CE2FB9227D9CB4C00C97216 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB9127D9CB4C00C97216 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CE2FB7D27D9CB4C00C97216 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CE2FB5727D9CB4A00C97216 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CE2FB7A27D9CB4C00C97216;
+			remoteInfo = "lgtm Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3CE2FB9A27D9CB4C00C97216 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3CE2FB5F27D9CB4A00C97216 /* LGTM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGTM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3CE2FB6627D9CB4A00C97216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		3CE2FB6827D9CB4A00C97216 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3CE2FB6A27D9CB4A00C97216 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		3CE2FB6C27D9CB4A00C97216 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CE2FB7127D9CB4A00C97216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm.entitlements; sourceTree = "<group>"; };
+		3CE2FB7627D9CB4C00C97216 /* lgtm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm.entitlements; sourceTree = "<group>"; };
+		3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LGTM Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		3CE2FB8327D9CB4C00C97216 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		3CE2FB8527D9CB4C00C97216 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		3CE2FB8727D9CB4C00C97216 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		3CE2FB8927D9CB4C00C97216 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		3CE2FB8B27D9CB4C00C97216 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		3CE2FB8D27D9CB4C00C97216 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		3CE2FB8F27D9CB4C00C97216 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		3CE2FB9127D9CB4C00C97216 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		3CE2FB9327D9CB4C00C97216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE2FB9427D9CB4C00C97216 /* lgtm_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CE2FB5C27D9CB4A00C97216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CE2FB7827D9CB4C00C97216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CE2FB5627D9CB4A00C97216 = {
+			isa = PBXGroup;
+			children = (
+				3CE2FB6127D9CB4A00C97216 /* lgtm */,
+				3CE2FB7F27D9CB4C00C97216 /* lgtm Extension */,
+				3CE2FB6027D9CB4A00C97216 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CE2FB6027D9CB4A00C97216 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CE2FB5F27D9CB4A00C97216 /* LGTM.app */,
+				3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CE2FB6127D9CB4A00C97216 /* lgtm */ = {
+			isa = PBXGroup;
+			children = (
+				3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */,
+				3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */,
+				3CE2FB7027D9CB4A00C97216 /* Main.storyboard */,
+				3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */,
+				3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */,
+				3CE2FB7627D9CB4C00C97216 /* lgtm.entitlements */,
+				3CE2FB6427D9CB4A00C97216 /* Resources */,
+			);
+			path = lgtm;
+			sourceTree = "<group>";
+		};
+		3CE2FB6427D9CB4A00C97216 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CE2FB6527D9CB4A00C97216 /* Main.html */,
+				3CE2FB6827D9CB4A00C97216 /* Icon.png */,
+				3CE2FB6A27D9CB4A00C97216 /* Style.css */,
+				3CE2FB6C27D9CB4A00C97216 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CE2FB7F27D9CB4C00C97216 /* lgtm Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */,
+				3CE2FB9327D9CB4C00C97216 /* Info.plist */,
+				3CE2FB9427D9CB4C00C97216 /* lgtm_Extension.entitlements */,
+				3CE2FB8227D9CB4C00C97216 /* Resources */,
+			);
+			path = "lgtm Extension";
+			sourceTree = "<group>";
+		};
+		3CE2FB8227D9CB4C00C97216 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CE2FB8327D9CB4C00C97216 /* _locales */,
+				3CE2FB8527D9CB4C00C97216 /* images */,
+				3CE2FB8727D9CB4C00C97216 /* manifest.json */,
+				3CE2FB8927D9CB4C00C97216 /* background.js */,
+				3CE2FB8B27D9CB4C00C97216 /* content.js */,
+				3CE2FB8D27D9CB4C00C97216 /* popup.html */,
+				3CE2FB8F27D9CB4C00C97216 /* popup.css */,
+				3CE2FB9127D9CB4C00C97216 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CE2FB5E27D9CB4A00C97216 /* LGTM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CE2FB9B27D9CB4C00C97216 /* Build configuration list for PBXNativeTarget "LGTM" */;
+			buildPhases = (
+				3CE2FB5B27D9CB4A00C97216 /* Sources */,
+				3CE2FB5C27D9CB4A00C97216 /* Frameworks */,
+				3CE2FB5D27D9CB4A00C97216 /* Resources */,
+				3CE2FB9A27D9CB4C00C97216 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CE2FB7E27D9CB4C00C97216 /* PBXTargetDependency */,
+			);
+			name = LGTM;
+			productName = lgtm;
+			productReference = 3CE2FB5F27D9CB4A00C97216 /* LGTM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3CE2FB7A27D9CB4C00C97216 /* LGTM Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CE2FB9727D9CB4C00C97216 /* Build configuration list for PBXNativeTarget "LGTM Extension" */;
+			buildPhases = (
+				3CE2FB7727D9CB4C00C97216 /* Sources */,
+				3CE2FB7827D9CB4C00C97216 /* Frameworks */,
+				3CE2FB7927D9CB4C00C97216 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LGTM Extension";
+			productName = "lgtm Extension";
+			productReference = 3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CE2FB5727D9CB4A00C97216 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					3CE2FB5E27D9CB4A00C97216 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					3CE2FB7A27D9CB4C00C97216 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 3CE2FB5A27D9CB4A00C97216 /* Build configuration list for PBXProject "lgtm" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CE2FB5627D9CB4A00C97216;
+			productRefGroup = 3CE2FB6027D9CB4A00C97216 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CE2FB5E27D9CB4A00C97216 /* LGTM */,
+				3CE2FB7A27D9CB4C00C97216 /* LGTM Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CE2FB5D27D9CB4A00C97216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CE2FB6927D9CB4A00C97216 /* Icon.png in Resources */,
+				3CE2FB7227D9CB4A00C97216 /* Main.storyboard in Resources */,
+				3CE2FB6D27D9CB4A00C97216 /* Script.js in Resources */,
+				3CE2FB6727D9CB4A00C97216 /* Main.html in Resources */,
+				3CE2FB7427D9CB4C00C97216 /* Assets.xcassets in Resources */,
+				3CE2FB6B27D9CB4A00C97216 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CE2FB7927D9CB4C00C97216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CE2FB8A27D9CB4C00C97216 /* background.js in Resources */,
+				3CE2FB9027D9CB4C00C97216 /* popup.css in Resources */,
+				3CE2FB8E27D9CB4C00C97216 /* popup.html in Resources */,
+				3CE2FB8627D9CB4C00C97216 /* images in Resources */,
+				3CE2FB8827D9CB4C00C97216 /* manifest.json in Resources */,
+				3CE2FB8427D9CB4C00C97216 /* _locales in Resources */,
+				3CE2FB8C27D9CB4C00C97216 /* content.js in Resources */,
+				3CE2FB9227D9CB4C00C97216 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CE2FB5B27D9CB4A00C97216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CE2FB6F27D9CB4A00C97216 /* ViewController.swift in Sources */,
+				3CE2FB6327D9CB4A00C97216 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CE2FB7727D9CB4C00C97216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CE2FB8127D9CB4C00C97216 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CE2FB7E27D9CB4C00C97216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CE2FB7A27D9CB4C00C97216 /* LGTM Extension */;
+			targetProxy = 3CE2FB7D27D9CB4C00C97216 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3CE2FB6527D9CB4A00C97216 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CE2FB6627D9CB4A00C97216 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		3CE2FB7027D9CB4A00C97216 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CE2FB7127D9CB4A00C97216 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CE2FB9527D9CB4C00C97216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3CE2FB9627D9CB4C00C97216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3CE2FB9827D9CB4C00C97216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "lgtm Extension/lgtm_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "lgtm Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "lgtm Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3CE2FB9927D9CB4C00C97216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "lgtm Extension/lgtm_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "lgtm Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "lgtm Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3CE2FB9C27D9CB4C00C97216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lgtm/lgtm.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = lgtm;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3CE2FB9D27D9CB4C00C97216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lgtm/lgtm.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = lgtm;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CE2FB5A27D9CB4A00C97216 /* Build configuration list for PBXProject "lgtm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CE2FB9527D9CB4C00C97216 /* Debug */,
+				3CE2FB9627D9CB4C00C97216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CE2FB9727D9CB4C00C97216 /* Build configuration list for PBXNativeTarget "LGTM Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CE2FB9827D9CB4C00C97216 /* Debug */,
+				3CE2FB9927D9CB4C00C97216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CE2FB9B27D9CB4C00C97216 /* Build configuration list for PBXNativeTarget "LGTM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CE2FB9C27D9CB4C00C97216 /* Debug */,
+				3CE2FB9D27D9CB4C00C97216 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CE2FB5727D9CB4A00C97216 /* Project object */;
+}
