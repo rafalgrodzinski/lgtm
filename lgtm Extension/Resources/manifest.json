@@ -31,5 +31,5 @@
         "matches": [ "<all_urls>" ]
     }],
 
-    "permissions": [ ],
+    "permissions": ["https://lgtmoon.herokuapp.com/"]
 }

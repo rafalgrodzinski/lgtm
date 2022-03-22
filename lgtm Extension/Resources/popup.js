@@ -13,23 +13,23 @@ window.addEventListener("load", (event) => {
         });
     });*/
 
-    for (let i=0; i<40; i++) {
-        let url = lgtmUrl();
-        let img = lgtmImage(url);
-        img.addEventListener("click", (e) => {
-            browser.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-                browser.tabs.sendMessage(tabs[0].id, url);
+    let request = new XMLHttpRequest();
+    request.onload = function() {
+        let response = JSON.parse(this.responseText);
+        response.images.forEach(function (value, index, array) {
+            let img = lgtmImage(value.url);
+            img.addEventListener("click", (e) => {
+                browser.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+                    browser.tabs.sendMessage(tabs[0].id, url);
+                });
             });
+            let container = document.getElementById("container");
+            container.appendChild(img);
         });
-        let container = document.getElementById("container");
-        container.appendChild(img);
     }
+    request.open("GET", "https://lgtmoon.herokuapp.com/api/images/random");
+    request.send();
 });
-
-function lgtmUrl() {
-    let index = Math.round(Math.random() * 10000 + 10000)
-    return "https://image.lgtmoon.dev/" + index
-}
 
 function lgtmImage(url) {
     let imgContainer = document.createElement("div");
