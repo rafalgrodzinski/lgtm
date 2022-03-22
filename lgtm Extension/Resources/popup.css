@@ -7,18 +7,40 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 8px;
-    row-gap: 8px;
-    align-content: space-between;
+    column-count: 3;
+    column-gap: 0px;
 }
 
-.element {
+.element-small {
     width: 100%;
-    margin: auto auto;
+    height: auto;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    border: 4px solid transparent;
+    opacity: 1;
 }
 
-.element:hover {
-    width: 110%;
+.element-big {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 1;
+}
+
+.element-big:hover {
+    opacity: 1;
+}
+
+.element-big:hover + img {
+    opacity: 0;
+}
+
+.element-container {
+    position: relative;
 }

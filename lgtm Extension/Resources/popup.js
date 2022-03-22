@@ -16,6 +16,11 @@ window.addEventListener("load", (event) => {
     for (let i=0; i<40; i++) {
         let url = lgtmUrl();
         let img = lgtmImage(url);
+        img.addEventListener("click", (e) => {
+            browser.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+                browser.tabs.sendMessage(tabs[0].id, url);
+            });
+        });
         let container = document.getElementById("container");
         container.appendChild(img);
     }
@@ -27,8 +32,18 @@ function lgtmUrl() {
 }
 
 function lgtmImage(url) {
-    let img = document.createElement("img");
-    img.src = url;
-    img.classList.add("element");
-    return img;
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("element-container");
+
+    let imgBig = document.createElement("img");
+    imgBig.src = url;
+    imgBig.classList.add("element-big");
+    imgContainer.appendChild(imgBig);
+
+    let imgSmall = document.createElement("img");
+    imgSmall.src = url;
+    imgSmall.classList.add("element-small");
+    imgContainer.appendChild(imgSmall);
+
+    return imgContainer;
 }
