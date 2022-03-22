@@ -4,6 +4,7 @@
 
 body {
     width: 300px;
+    text-align: center;
 }
 
 .container {
@@ -43,4 +44,14 @@ body {
 
 .element-container {
     position: relative;
+}
+
+.reload {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin: 4px;
+    padding: 0px;
 }
