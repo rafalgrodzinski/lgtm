@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/rafalgrodzinski/Workspace/lgtm/lgtm.xcodeproj">
+      location = "self:../lgtm Extension/Resources">
    </FileRef>
 </Workspace>

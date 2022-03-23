@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3CE2FB6327D9CB4A00C97216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */; };
-		3CE2FB6727D9CB4A00C97216 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6527D9CB4A00C97216 /* Main.html */; };
 		3CE2FB6927D9CB4A00C97216 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6827D9CB4A00C97216 /* Icon.png */; };
 		3CE2FB6B27D9CB4A00C97216 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6A27D9CB4A00C97216 /* Style.css */; };
 		3CE2FB6D27D9CB4A00C97216 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6C27D9CB4A00C97216 /* Script.js */; };
 		3CE2FB6F27D9CB4A00C97216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */; };
-		3CE2FB7227D9CB4A00C97216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB7027D9CB4A00C97216 /* Main.storyboard */; };
 		3CE2FB7427D9CB4C00C97216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */; };
 		3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CE2FB8127D9CB4C00C97216 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */; };
@@ -24,6 +22,8 @@
 		3CE2FB8E27D9CB4C00C97216 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8D27D9CB4C00C97216 /* popup.html */; };
 		3CE2FB9027D9CB4C00C97216 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8F27D9CB4C00C97216 /* popup.css */; };
 		3CE2FB9227D9CB4C00C97216 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB9127D9CB4C00C97216 /* popup.js */; };
+		B5E281F527EB31A600EEB3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E281F427EB31A600EEB3C4 /* Main.storyboard */; };
+		B5E281F727EB31BE00EEB3C4 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = B5E281F627EB31BE00EEB3C4 /* Main.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,15 +53,12 @@
 /* Begin PBXFileReference section */
 		3CE2FB5F27D9CB4A00C97216 /* LGTM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LGTM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CE2FB6627D9CB4A00C97216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		3CE2FB6827D9CB4A00C97216 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3CE2FB6A27D9CB4A00C97216 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
 		3CE2FB6C27D9CB4A00C97216 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
 		3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3CE2FB7127D9CB4A00C97216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm.entitlements; sourceTree = "<group>"; };
-		3CE2FB7627D9CB4C00C97216 /* lgtm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm.entitlements; sourceTree = "<group>"; };
 		3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LGTM Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		3CE2FB8327D9CB4C00C97216 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -73,6 +70,8 @@
 		3CE2FB9127D9CB4C00C97216 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		3CE2FB9327D9CB4C00C97216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE2FB9427D9CB4C00C97216 /* lgtm_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm_Extension.entitlements; sourceTree = "<group>"; };
+		B5E281F427EB31A600EEB3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B5E281F627EB31BE00EEB3C4 /* Main.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Main.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +115,9 @@
 			children = (
 				3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */,
 				3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */,
-				3CE2FB7027D9CB4A00C97216 /* Main.storyboard */,
+				B5E281F427EB31A600EEB3C4 /* Main.storyboard */,
 				3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */,
 				3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */,
-				3CE2FB7627D9CB4C00C97216 /* lgtm.entitlements */,
 				3CE2FB6427D9CB4A00C97216 /* Resources */,
 			);
 			path = lgtm;
@@ -128,7 +126,7 @@
 		3CE2FB6427D9CB4A00C97216 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3CE2FB6527D9CB4A00C97216 /* Main.html */,
+				B5E281F627EB31BE00EEB3C4 /* Main.html */,
 				3CE2FB6827D9CB4A00C97216 /* Icon.png */,
 				3CE2FB6A27D9CB4A00C97216 /* Style.css */,
 				3CE2FB6C27D9CB4A00C97216 /* Script.js */,
@@ -224,7 +222,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = 3CE2FB5627D9CB4A00C97216;
 			productRefGroup = 3CE2FB6027D9CB4A00C97216 /* Products */;
@@ -243,9 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE2FB6927D9CB4A00C97216 /* Icon.png in Resources */,
-				3CE2FB7227D9CB4A00C97216 /* Main.storyboard in Resources */,
+				B5E281F727EB31BE00EEB3C4 /* Main.html in Resources */,
 				3CE2FB6D27D9CB4A00C97216 /* Script.js in Resources */,
-				3CE2FB6727D9CB4A00C97216 /* Main.html in Resources */,
+				B5E281F527EB31A600EEB3C4 /* Main.storyboard in Resources */,
 				3CE2FB7427D9CB4C00C97216 /* Assets.xcassets in Resources */,
 				3CE2FB6B27D9CB4A00C97216 /* Style.css in Resources */,
 			);
@@ -294,25 +291,6 @@
 			targetProxy = 3CE2FB7D27D9CB4C00C97216 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3CE2FB6527D9CB4A00C97216 /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CE2FB6627D9CB4A00C97216 /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
-		3CE2FB7027D9CB4A00C97216 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CE2FB7127D9CB4A00C97216 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3CE2FB9527D9CB4C00C97216 /* Debug */ = {
@@ -451,7 +429,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -480,7 +458,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
