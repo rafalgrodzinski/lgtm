@@ -11,7 +11,7 @@
 		3CE2FB6F27D9CB4A00C97216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */; };
 		3CE2FB7427D9CB4C00C97216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */; };
 		3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3CE2FB8127D9CB4C00C97216 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */; };
+		3CE2FB8127D9CB4C00C97216 /* ExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8027D9CB4C00C97216 /* ExtensionHandler.swift */; };
 		3CE2FB8427D9CB4C00C97216 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8327D9CB4C00C97216 /* _locales */; };
 		3CE2FB8627D9CB4C00C97216 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8527D9CB4C00C97216 /* images */; };
 		3CE2FB8827D9CB4C00C97216 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8727D9CB4C00C97216 /* manifest.json */; };
@@ -54,7 +54,7 @@
 		3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm.entitlements; sourceTree = "<group>"; };
 		3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LGTM Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		3CE2FB8027D9CB4C00C97216 /* ExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHandler.swift; sourceTree = "<group>"; };
 		3CE2FB8327D9CB4C00C97216 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		3CE2FB8527D9CB4C00C97216 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		3CE2FB8727D9CB4C00C97216 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		3CE2FB8F27D9CB4C00C97216 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
 		3CE2FB9127D9CB4C00C97216 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		3CE2FB9327D9CB4C00C97216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CE2FB9427D9CB4C00C97216 /* lgtm_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm_Extension.entitlements; sourceTree = "<group>"; };
+		3CE2FB9427D9CB4C00C97216 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
 		B5E281F427EB31A600EEB3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B5E281F827EB3B9900EEB3C4 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE2FB6127D9CB4A00C97216 /* lgtm */,
-				3CE2FB7F27D9CB4C00C97216 /* lgtm Extension */,
+				3CE2FB7F27D9CB4C00C97216 /* Extension */,
 				3CE2FB6027D9CB4A00C97216 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,30 +116,30 @@
 			path = lgtm;
 			sourceTree = "<group>";
 		};
-		3CE2FB7F27D9CB4C00C97216 /* lgtm Extension */ = {
+		3CE2FB7F27D9CB4C00C97216 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3CE2FB8027D9CB4C00C97216 /* SafariWebExtensionHandler.swift */,
+				B5E281FC27EB412900EEB3C4 /* Source */,
 				3CE2FB9327D9CB4C00C97216 /* Info.plist */,
-				3CE2FB9427D9CB4C00C97216 /* lgtm_Extension.entitlements */,
-				3CE2FB8227D9CB4C00C97216 /* Resources */,
-			);
-			path = "lgtm Extension";
-			sourceTree = "<group>";
-		};
-		3CE2FB8227D9CB4C00C97216 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
+				3CE2FB8727D9CB4C00C97216 /* manifest.json */,
+				3CE2FB9427D9CB4C00C97216 /* Extension.entitlements */,
 				3CE2FB8327D9CB4C00C97216 /* _locales */,
 				3CE2FB8527D9CB4C00C97216 /* images */,
-				3CE2FB8727D9CB4C00C97216 /* manifest.json */,
-				3CE2FB8B27D9CB4C00C97216 /* content.js */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B5E281FC27EB412900EEB3C4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3CE2FB8027D9CB4C00C97216 /* ExtensionHandler.swift */,
 				3CE2FB8D27D9CB4C00C97216 /* popup.html */,
 				3CE2FB8F27D9CB4C00C97216 /* popup.css */,
 				3CE2FB9127D9CB4C00C97216 /* popup.js */,
+				3CE2FB8B27D9CB4C00C97216 /* content.js */,
 				B5E281F827EB3B9900EEB3C4 /* background.js */,
 			);
-			path = Resources;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CE2FB8127D9CB4C00C97216 /* SafariWebExtensionHandler.swift in Sources */,
+				3CE2FB8127D9CB4C00C97216 /* ExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,13 +391,13 @@
 		3CE2FB9827D9CB4C00C97216 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "lgtm Extension/lgtm_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Extension/Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "lgtm Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "lgtm Extension";
+				INFOPLIST_FILE = "$(SRCROOT)/Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LGTM Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -420,13 +420,13 @@
 		3CE2FB9927D9CB4C00C97216 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "lgtm Extension/lgtm_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Extension/Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "lgtm Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "lgtm Extension";
+				INFOPLIST_FILE = "$(SRCROOT)/Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LGTM Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +458,7 @@
 				CURRENT_PROJECT_VERSION = 0;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = lgtm;
+				INFOPLIST_KEY_CFBundleDisplayName = LGTM;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -493,7 +493,7 @@
 				CURRENT_PROJECT_VERSION = 0;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = lgtm;
+				INFOPLIST_KEY_CFBundleDisplayName = LGTM;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
