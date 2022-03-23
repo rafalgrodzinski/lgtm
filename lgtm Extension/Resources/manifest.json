@@ -30,6 +30,10 @@
         "js": [ "content.js" ],
         "matches": [ "<all_urls>" ]
     }],
+    
+    "background": {
+        "scripts": [ "background.js" ]
+    },
 
-    "permissions": ["https://lgtmoon.herokuapp.com/"]
+    "permissions": ["https://lgtmoon.herokuapp.com/", "nativeMessaging"]
 }
