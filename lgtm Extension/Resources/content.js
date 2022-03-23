@@ -1,17 +1,28 @@
-browser.runtime.onMessage.addListener((url) => {
-    //console.log("message received");
-    //alert(message);
-    insertUrlAsMarkdown(url);
-});
+let lastFocusedElement
 
-/*function colorElements(color) {
-    let list = document.getElementsByTagName("h2");
-    for(let element of list) {
-        element.style.color = color;
-    }
-}*/
+function setupActiveElementListener() {
+    let textAreas = Array.from(document.getElementsByTagName("textarea"))
+    let inputs = Array.from(document.getElementsByTagName("input"))
+    let textInputs = inputs.filter(element => { return element.type === "text" })
 
-function insertUrlAsMarkdown(url) {
-    let el = document.activeElement;
-    console.log("abc");
+    textAreas.concat(textInputs).forEach(element => {
+        element.addEventListener("focus", event => {
+            lastFocusedElement = element
+        })
+    })
 }
+
+function setupSelectionListener() {
+    browser.runtime.onMessage.addListener(url => {
+        insertUrlAsMarkdown(url, lastFocusedElement)
+        lastFocusedElement = null
+    })
+}
+
+function insertUrlAsMarkdown(url, textField) {
+    if (textField == null) return
+    textField.value += url
+}
+
+setupActiveElementListener()
+setupSelectionListener()

@@ -30,11 +30,23 @@ function reload() {
 function lgtmImage(url) {
     let imgContainer = document.createElement("div");
     imgContainer.classList.add("element-container");
+    imgContainer.addEventListener("click", (e) => {
+        browser.tabs.query({currentWindow: true, active: true}, function (tabs) {
+            console.log("tab found");
+            browser.tabs.sendMessage(tabs[0].id, url);
+        });
+    });
 
     let imgBig = document.createElement("img");
     imgBig.src = url;
     imgBig.classList.add("element-big");
     imgContainer.appendChild(imgBig);
+    imgBig.addEventListener("click", (e) => {
+        browser.tabs.query({currentWindow: true, active: true}, function (tabs) {
+            console.log("tab found");
+            browser.tabs.sendMessage(tabs[0].id, url);
+        });
+    });
 
     let imgSmall = document.createElement("img");
     imgSmall.src = url;
