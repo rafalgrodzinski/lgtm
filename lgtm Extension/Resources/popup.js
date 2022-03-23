@@ -1,57 +1,55 @@
-window.addEventListener("load", (event) => {
-    var button = document.getElementById("reload");
-    button.addEventListener("click", (e) => {
-        reload();
-    });
-
-    reload();
-});
+window.addEventListener("load", event => {
+    // Reload images on pressing the reload button
+    var button = document.getElementById("reload")
+    button.addEventListener("click", e => {
+        reload()
+    })
+    // Initial images load
+    reload()
+})
 
 function reload() {
-    let request = new XMLHttpRequest();
+    // Create new request to fetch lgtm image urls
+    let request = new XMLHttpRequest()
     request.onload = function() {
-        let response = JSON.parse(this.responseText);
-        let container = document.getElementById("container");
-        container.innerHTML = "";
-        response.images.forEach(function (value, index, array) {
-            let img = lgtmImage(value.url);
-            img.addEventListener("click", (e) => {
-                browser.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-                    browser.tabs.sendMessage(tabs[0].id, url);
-                });
-            });
-            container.appendChild(img);
-        });
+        // Remove existing images
+        let container = document.getElementById("container")
+        container.innerHTML = ""
+        // Extract json from response
+        let response = JSON.parse(this.responseText)
+        response.images.forEach(value => {
+            // Create element for each url
+            let img = lgtmImage(value.url)
+            container.appendChild(img)
+        })
     }
-    request.open("GET", "https://lgtmoon.herokuapp.com/api/images/random");
-    request.send();
+    request.open("GET", "https://lgtmoon.herokuapp.com/api/images/random")
+    request.send()
 }
 
 function lgtmImage(url) {
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add("element-container");
-    imgContainer.addEventListener("click", (e) => {
-        browser.tabs.query({currentWindow: true, active: true}, function (tabs) {
-            console.log("tab found");
+    // Create container for big and small image
+    let imgContainer = document.createElement("div")
+    imgContainer.classList.add("element-container")
+    // Call content script on on click, pass the url
+    imgContainer.addEventListener("click", e => {
+        browser.tabs.query({currentWindow: true, active: true}, tabs => {
             browser.tabs.sendMessage(tabs[0].id, url);
-        });
-    });
+            window.close()
+        })
+    })
 
-    let imgBig = document.createElement("img");
-    imgBig.src = url;
-    imgBig.classList.add("element-big");
-    imgContainer.appendChild(imgBig);
-    imgBig.addEventListener("click", (e) => {
-        browser.tabs.query({currentWindow: true, active: true}, function (tabs) {
-            console.log("tab found");
-            browser.tabs.sendMessage(tabs[0].id, url);
-        });
-    });
+    // Crete expanded image (when hovering)
+    let imgBig = document.createElement("img")
+    imgBig.src = url
+    imgBig.classList.add("element-big")
+    imgContainer.appendChild(imgBig)
 
-    let imgSmall = document.createElement("img");
-    imgSmall.src = url;
-    imgSmall.classList.add("element-small");
-    imgContainer.appendChild(imgSmall);
+    // Create shrunk image (default view)
+    let imgSmall = document.createElement("img")
+    imgSmall.src = url
+    imgSmall.classList.add("element-small")
+    imgContainer.appendChild(imgSmall)
 
-    return imgContainer;
+    return imgContainer
 }
