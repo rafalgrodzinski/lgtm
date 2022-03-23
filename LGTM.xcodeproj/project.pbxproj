@@ -52,7 +52,7 @@
 		3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lgtm.entitlements; sourceTree = "<group>"; };
+		3CE2FB7527D9CB4C00C97216 /* LGTM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LGTM.entitlements; sourceTree = "<group>"; };
 		3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LGTM Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE2FB8027D9CB4C00C97216 /* ExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHandler.swift; sourceTree = "<group>"; };
 		3CE2FB8327D9CB4C00C97216 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				B5E281F427EB31A600EEB3C4 /* Main.storyboard */,
 				3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */,
 				3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */,
-				3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */,
+				3CE2FB7527D9CB4C00C97216 /* LGTM.entitlements */,
 			);
 			path = LGTM;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = lgtm/lgtm.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/LGTM/LGTM.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;
@@ -487,7 +487,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = lgtm/lgtm.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/LGTM/LGTM.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 0;

@@ -1,6 +1,6 @@
 //
 //  ExtensionHandler.swift
-//  lgtm Extension
+//  Extension
 //
 //  Created by Rafal Grodzinski on 2022/03/10.
 //

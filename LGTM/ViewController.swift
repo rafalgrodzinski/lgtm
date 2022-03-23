@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  lgtm
+//  LGTM
 //
 //  Created by Rafal Grodzinski on 2022/03/10.
 //
