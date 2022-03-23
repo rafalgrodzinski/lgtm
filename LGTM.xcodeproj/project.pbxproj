@@ -89,7 +89,7 @@
 		3CE2FB5627D9CB4A00C97216 = {
 			isa = PBXGroup;
 			children = (
-				3CE2FB6127D9CB4A00C97216 /* lgtm */,
+				3CE2FB6127D9CB4A00C97216 /* LGTM */,
 				3CE2FB7F27D9CB4C00C97216 /* Extension */,
 				3CE2FB6027D9CB4A00C97216 /* Products */,
 			);
@@ -104,7 +104,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3CE2FB6127D9CB4A00C97216 /* lgtm */ = {
+		3CE2FB6127D9CB4A00C97216 /* LGTM */ = {
 			isa = PBXGroup;
 			children = (
 				3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */,
@@ -113,7 +113,7 @@
 				3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */,
 				3CE2FB7527D9CB4C00C97216 /* lgtm.entitlements */,
 			);
-			path = lgtm;
+			path = LGTM;
 			sourceTree = "<group>";
 		};
 		3CE2FB7F27D9CB4C00C97216 /* Extension */ = {
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3CE2FB5A27D9CB4A00C97216 /* Build configuration list for PBXProject "lgtm" */;
+			buildConfigurationList = 3CE2FB5A27D9CB4A00C97216 /* Build configuration list for PBXProject "LGTM" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -519,7 +519,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3CE2FB5A27D9CB4A00C97216 /* Build configuration list for PBXProject "lgtm" */ = {
+		3CE2FB5A27D9CB4A00C97216 /* Build configuration list for PBXProject "LGTM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CE2FB9527D9CB4C00C97216 /* Debug */,
