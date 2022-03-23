@@ -4,7 +4,6 @@
 
 body {
     width: 300px;
-    text-align: center;
 }
 
 .container {
@@ -46,12 +45,27 @@ body {
     position: relative;
 }
 
+.title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-spacer {
+    display: inline;
+    width: 15%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: Helvetica, sans-serif;
+    margin: auto 0 auto 0;
+}
+
 .reload {
     font-weight: bold;
-    font-size: 2em;
-    text-align: center;
+    font-size: 1.5em;
     display: inline-block;
-    width: 50%;
-    margin: 4px;
-    padding: 0px;
+    width: 15%;
+    padding: 2px 0px 0px 0px;
 }
