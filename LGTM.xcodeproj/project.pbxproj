@@ -21,6 +21,8 @@
 		3CE2FB9227D9CB4C00C97216 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB9127D9CB4C00C97216 /* popup.js */; };
 		B5E281F527EB31A600EEB3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E281F427EB31A600EEB3C4 /* Main.storyboard */; };
 		B5E281FA27EB3BE300EEB3C4 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = B5E281F827EB3B9900EEB3C4 /* background.js */; };
+		B5EF719727EECF88009F5F57 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF719627EECF88009F5F57 /* Settings.swift */; };
+		B5EF719827EECF88009F5F57 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF719627EECF88009F5F57 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		B5E281F427EB31A600EEB3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B5E281F827EB3B9900EEB3C4 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		B5E281FD27EB444A00EEB3C4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5EF719627EECF88009F5F57 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				B5E281FD27EB444A00EEB3C4 /* README.md */,
 				3CE2FB6127D9CB4A00C97216 /* LGTM */,
 				3CE2FB7F27D9CB4C00C97216 /* Extension */,
+				B5EF719527EECF76009F5F57 /* Shared */,
 				3CE2FB6027D9CB4A00C97216 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +148,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		B5EF719527EECF76009F5F57 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B5EF719627EECF88009F5F57 /* Settings.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,7 +203,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					3CE2FB5E27D9CB4A00C97216 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -251,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5EF719727EECF88009F5F57 /* Settings.swift in Sources */,
 				3CE2FB6F27D9CB4A00C97216 /* ViewController.swift in Sources */,
 				3CE2FB6327D9CB4A00C97216 /* AppDelegate.swift in Sources */,
 			);
@@ -260,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5EF719827EECF88009F5F57 /* Settings.swift in Sources */,
 				3CE2FB8127D9CB4C00C97216 /* ExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +426,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.extension;
+				PRODUCT_MODULE_NAME = Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -441,6 +456,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafalgrodzinski.lgtm.extension;
+				PRODUCT_MODULE_NAME = Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

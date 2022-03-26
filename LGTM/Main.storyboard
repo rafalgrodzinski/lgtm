@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="System colors introduced in macOS 10.13" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,11 +83,111 @@
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="425" height="325"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="622-8j-Wpk" userLabel="Logo Image View">
+                                <rect key="frame" x="181" y="245" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="BOX-Wy-7xq"/>
+                                    <constraint firstAttribute="width" constant="64" id="XhE-9n-7Mf"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="va7-jt-8Xg"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pci-q0-uhR" userLabel="Should Insert Check">
+                                <rect key="frame" x="14" y="212" width="195" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="4yh-mJ-3Ds"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Insert into selected text box" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="N6w-au-Jip">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="shouldInsertCheckboxToggled:" target="XfG-lQ-9wD" id="PBZ-gs-Z3A"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-rq-lks" userLabel="Should Use Markdown Check">
+                                <rect key="frame" x="14" y="180" width="180" height="18"/>
+                                <buttonCell key="cell" type="check" title="Use Markdown style links" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="6Zp-4z-1KI">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="shouldUseMarkdownToggled:" target="XfG-lQ-9wD" id="0sE-ke-W8i"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-hp-kTf" userLabel="Open Settings Button">
+                                <rect key="frame" x="9" y="138" width="120" height="32"/>
+                                <buttonCell key="cell" type="push" title="Open In Safari" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NmU-K2-tCw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openSettingsPressed:" target="XfG-lQ-9wD" id="TgL-Qt-H8g"/>
+                                </connections>
+                            </button>
+                            <scrollView appearanceType="aqua" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2l-zg-Zq5">
+                                <rect key="frame" x="16" y="16" width="393" height="113"/>
+                                <clipView key="contentView" id="UWi-id-WWC">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView editable="NO" selectable="NO" importsGraphics="NO" verticallyResizable="YES" allowsDocumentBackgroundColorChange="YES" smartInsertDelete="YES" id="mdJ-FW-Io7">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <size key="minSize" width="393" height="113"/>
+                                            <size key="maxSize" width="393" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="findHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="YSt-uh-6PU">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="7oP-X4-ekA">
+                                    <rect key="frame" x="377" y="0.0" width="16" height="113"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="pci-q0-uhR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="2cQ-ps-Kdz"/>
+                            <constraint firstItem="Rar-hp-kTf" firstAttribute="top" secondItem="1TO-rq-lks" secondAttribute="bottom" constant="16" id="4LT-zQ-yw3"/>
+                            <constraint firstItem="622-8j-Wpk" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="5wh-J3-l4M"/>
+                            <constraint firstItem="i2l-zg-Zq5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="6ct-wJ-UD8"/>
+                            <constraint firstItem="622-8j-Wpk" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="82r-Jn-hb5"/>
+                            <constraint firstAttribute="bottom" secondItem="i2l-zg-Zq5" secondAttribute="bottom" constant="16" id="BuQ-07-4Cm"/>
+                            <constraint firstItem="Rar-hp-kTf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="Cwv-Jo-8i1"/>
+                            <constraint firstItem="pci-q0-uhR" firstAttribute="top" secondItem="622-8j-Wpk" secondAttribute="bottom" constant="16" id="Nq5-xX-zyD"/>
+                            <constraint firstAttribute="trailing" secondItem="i2l-zg-Zq5" secondAttribute="trailing" constant="16" id="Q7p-wP-IFZ"/>
+                            <constraint firstItem="1TO-rq-lks" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="WCW-nO-GmR"/>
+                            <constraint firstItem="i2l-zg-Zq5" firstAttribute="top" secondItem="Rar-hp-kTf" secondAttribute="bottom" constant="16" id="s7v-cU-AoR"/>
+                            <constraint firstItem="1TO-rq-lks" firstAttribute="top" secondItem="pci-q0-uhR" secondAttribute="bottom" constant="16" id="wD7-bY-DCC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="shouldInsertCheckbox" destination="pci-q0-uhR" id="bHf-ii-62e"/>
+                        <outlet property="shouldUseMarkdownCheckbox" destination="1TO-rq-lks" id="rgq-hM-Ziq"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <textView verticallyResizable="YES" usesFontPanel="YES" usesInspectorBar="YES" findStyle="bar" allowsDocumentBackgroundColorChange="YES" usesRuler="YES" smartInsertDelete="YES" id="TFz-sA-Ifk">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="minSize" width="240" height="135"/>
+                    <size key="maxSize" width="240" height="10000000"/>
+                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                </textView>
             </objects>
             <point key="canvasLocation" x="74.5" y="738.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppIcon" width="128" height="128"/>
+    </resources>
 </document>

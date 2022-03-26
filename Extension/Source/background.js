@@ -1,5 +1,12 @@
-let port = browser.runtime.connectNative("application.id")
-port.onMessage.addListener(message => {
-    console.log("Received message")
-    console.log("message " + message)
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message == "settings") {
+        browser.runtime.sendNativeMessage("com.rafalgrodzinski.lgtm",
+                                          "settings",
+                                          response => {
+            sendResponse(response)
+        })
+        return true
+    }
+    return false
 })
+

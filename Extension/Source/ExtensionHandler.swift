@@ -7,16 +7,21 @@
 
 import SafariServices
 
-let SFExtensionMessageKey = "message"
 
 class ExtensionHandler: NSObject, NSExtensionRequestHandling {
-	func beginRequest(with context: NSExtensionContext) {
-        let item = context.inputItems[0] as! NSExtensionItem
-        let message = item.userInfo?[SFExtensionMessageKey]
-
-        let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ] ]
-
-        context.completeRequest(returningItems: [response], completionHandler: nil)
+    private static let settingsRequestMessage = "settings"
+    
+    private let settings = Settings()
+    
+    func beginRequest(with context: NSExtensionContext) {
+        guard let item = context.inputItems[0] as? NSExtensionItem else { return }
+        guard let message = item.userInfo?[SFExtensionMessageKey] as? String else { return }
+        
+        if message == ExtensionHandler.settingsRequestMessage {
+            let response = NSExtensionItem()
+            response.userInfo = [ SFExtensionMessageKey: [Settings.settingShouldInsert: settings.shouldInsert,
+                                                          Settings.settingShouldUseMarkdown: settings.shouldUseMarkdown] ]
+            context.completeRequest(returningItems: [response], completionHandler: nil)
+        }
     }
 }

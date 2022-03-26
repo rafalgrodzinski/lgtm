@@ -34,7 +34,7 @@ function lgtmImage(url) {
     // Call content script on on click, pass the url
     imgContainer.addEventListener("click", e => {
         browser.tabs.query({currentWindow: true, active: true}, tabs => {
-            browser.tabs.sendMessage(tabs[0].id, url);
+            browser.tabs.sendMessage(tabs[0].id, url)
             window.close()
         })
     })
