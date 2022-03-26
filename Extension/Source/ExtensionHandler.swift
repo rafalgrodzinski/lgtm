@@ -11,16 +11,14 @@ import SafariServices
 class ExtensionHandler: NSObject, NSExtensionRequestHandling {
     private static let settingsRequestMessage = "settings"
     
-    private let settings = Settings()
-    
     func beginRequest(with context: NSExtensionContext) {
         guard let item = context.inputItems[0] as? NSExtensionItem else { return }
         guard let message = item.userInfo?[SFExtensionMessageKey] as? String else { return }
         
         if message == ExtensionHandler.settingsRequestMessage {
             let response = NSExtensionItem()
-            response.userInfo = [ SFExtensionMessageKey: [Settings.settingShouldInsert: settings.shouldInsert,
-                                                          Settings.settingShouldUseMarkdown: settings.shouldUseMarkdown] ]
+            response.userInfo = [ SFExtensionMessageKey: [Settings.settingShouldInsert: Settings.instance.shouldInsert,
+                                                          Settings.settingShouldUseMarkdown: Settings.instance.shouldUseMarkdown] ]
             context.completeRequest(returningItems: [response], completionHandler: nil)
         }
     }

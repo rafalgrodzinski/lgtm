@@ -13,21 +13,20 @@ class ViewController: NSViewController {
     
     @IBOutlet private weak var shouldInsertCheckbox: NSButton!
     @IBOutlet private weak var shouldUseMarkdownCheckbox: NSButton!
-    private let settings = Settings()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        shouldInsertCheckbox.state = settings.shouldInsert ? .on : .off
-        shouldUseMarkdownCheckbox.state = settings.shouldUseMarkdown ? .on : .off
+        shouldInsertCheckbox.state = Settings.instance.shouldInsert ? .on : .off
+        shouldUseMarkdownCheckbox.state = Settings.instance.shouldUseMarkdown ? .on : .off
     }
     
     @IBAction private func shouldInsertCheckboxToggled(_ sender: NSButton) {
-        settings.shouldInsert = sender.state == .on
+        Settings.instance.shouldInsert = sender.state == .on
     }
     
     @IBAction private func shouldUseMarkdownToggled(_ sender: NSButton) {
-        settings.shouldUseMarkdown = sender.state == .on
+        Settings.instance.shouldUseMarkdown = sender.state == .on
     }
     
     @IBAction private func openSettingsPressed(_ sender: NSButton) {
