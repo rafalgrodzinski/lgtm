@@ -1,22 +1,18 @@
-let lastFocusedElement
-
-function setupActiveElementListener() {
-    let textAreas = Array.from(document.getElementsByTagName("textarea"))
-    let inputs = Array.from(document.getElementsByTagName("input"))
-    let textInputs = inputs.filter(element => { return element.type === "text" })
-    
-    textAreas.concat(textInputs).forEach(element => {
-        element.addEventListener("focus", event => {
-            lastFocusedElement = element
-        })
+function setupSelectionListener() {
+    browser.runtime.onMessage.addListener(url => {
+        let textField = focusedTextField()
+        insertUrl(url, textField)
     })
 }
 
-function setupSelectionListener() {
-    browser.runtime.onMessage.addListener(url => {
-        insertUrl(url, lastFocusedElement)
-        lastFocusedElement = null
-    })
+function focusedTextField() {
+    let element = document.activeElement
+    let tagName = element.tagName.toLowerCase()
+    let type = element.type != undefined ? element.type.toLowerCase() : null
+    if (tagName == "input" && type == "text" || tagName == "textarea")
+        return element
+    else
+        return null
 }
 
 function insertUrl(url, textField) {
@@ -24,7 +20,7 @@ function insertUrl(url, textField) {
         let text = response.shouldUseMarkdown ? markdownUrl(url) : url
         if (response.shouldInsert && textField != null)
             textField.value += text
-        else if (!response.shouldInsert)
+        else
             window.prompt("Copy LGTM url", text)
     })
 }
@@ -33,5 +29,4 @@ function markdownUrl(url) {
     return "![LGTM](" + url + ")"
 }
 
-setupActiveElementListener()
 setupSelectionListener()
