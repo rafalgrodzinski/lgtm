@@ -13,12 +13,16 @@ class ViewController: NSViewController {
     
     @IBOutlet private weak var shouldInsertCheckbox: NSButton!
     @IBOutlet private weak var shouldUseMarkdownCheckbox: NSButton!
+    @IBOutlet private weak var descriptionText: NSTextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         shouldInsertCheckbox.state = Settings.instance.shouldInsert ? .on : .off
         shouldUseMarkdownCheckbox.state = Settings.instance.shouldUseMarkdown ? .on : .off
+        if let path = Bundle.main.path(forResource: "Description", ofType: "rtf") {
+            descriptionText.readRTFD(fromFile: path)
+        }
     }
     
     @IBAction private func shouldInsertCheckboxToggled(_ sender: NSButton) {

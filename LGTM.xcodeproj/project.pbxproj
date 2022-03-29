@@ -19,6 +19,7 @@
 		3CE2FB8E27D9CB4C00C97216 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8D27D9CB4C00C97216 /* popup.html */; };
 		3CE2FB9027D9CB4C00C97216 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8F27D9CB4C00C97216 /* popup.css */; };
 		3CE2FB9227D9CB4C00C97216 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB9127D9CB4C00C97216 /* popup.js */; };
+		B519CEFD27F3346F007D09A3 /* Description.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B519CEFC27F3346F007D09A3 /* Description.rtf */; };
 		B5E281F527EB31A600EEB3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E281F427EB31A600EEB3C4 /* Main.storyboard */; };
 		B5E281FA27EB3BE300EEB3C4 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = B5E281F827EB3B9900EEB3C4 /* background.js */; };
 		B5EF719727EECF88009F5F57 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EF719627EECF88009F5F57 /* Settings.swift */; };
@@ -66,6 +67,7 @@
 		3CE2FB9127D9CB4C00C97216 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		3CE2FB9327D9CB4C00C97216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE2FB9427D9CB4C00C97216 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
+		B519CEFC27F3346F007D09A3 /* Description.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Description.rtf; sourceTree = "<group>"; };
 		B5E281F427EB31A600EEB3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B5E281F827EB3B9900EEB3C4 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		B5E281FD27EB444A00EEB3C4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */,
 				3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */,
 				3CE2FB7527D9CB4C00C97216 /* LGTM.entitlements */,
+				B519CEFC27F3346F007D09A3 /* Description.rtf */,
 			);
 			path = LGTM;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E281F527EB31A600EEB3C4 /* Main.storyboard in Resources */,
+				B519CEFD27F3346F007D09A3 /* Description.rtf in Resources */,
 				3CE2FB7427D9CB4C00C97216 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
