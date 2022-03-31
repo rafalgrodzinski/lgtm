@@ -14,15 +14,26 @@ class ViewController: NSViewController {
     @IBOutlet private weak var shouldInsertCheckbox: NSButton!
     @IBOutlet private weak var shouldUseMarkdownCheckbox: NSButton!
     @IBOutlet private weak var descriptionText: NSTextView!
+    @IBOutlet private weak var descriptionTextHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Load settings
         shouldInsertCheckbox.state = Settings.instance.shouldInsert ? .on : .off
         shouldUseMarkdownCheckbox.state = Settings.instance.shouldUseMarkdown ? .on : .off
+        
+        // Load description
         if let path = Bundle.main.path(forResource: "Description", ofType: "rtf") {
             descriptionText.readRTFD(fromFile: path)
         }
+        
+        // Size text view
+        if let layoutManager = descriptionText.layoutManager, let textContainer = descriptionText.textContainer {
+            layoutManager.ensureLayout(for: textContainer)
+            descriptionTextHeightConstraint.constant = layoutManager.usedRect(for: textContainer).height
+        }
+        descriptionText.usesAdaptiveColorMappingForDarkAppearance = true
     }
     
     @IBAction private func shouldInsertCheckboxToggled(_ sender: NSButton) {
