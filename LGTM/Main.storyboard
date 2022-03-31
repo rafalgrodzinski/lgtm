@@ -80,11 +80,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="LGTM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="425" height="222"/>
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="231"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="622-8j-Wpk" userLabel="Logo Image View">
-                                <rect key="frame" x="181" y="142" width="64" height="64"/>
+                                <rect key="frame" x="181" y="159" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="BOX-Wy-7xq"/>
                                     <constraint firstAttribute="width" constant="64" id="XhE-9n-7Mf"/>
@@ -92,7 +92,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="va7-jt-8Xg"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pci-q0-uhR" userLabel="Should Insert Check">
-                                <rect key="frame" x="14" y="109" width="195" height="18"/>
+                                <rect key="frame" x="14" y="126" width="195" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="193" id="4yh-mJ-3Ds"/>
                                 </constraints>
@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-rq-lks" userLabel="Should Use Markdown Check">
-                                <rect key="frame" x="14" y="77" width="180" height="18"/>
+                                <rect key="frame" x="14" y="94" width="180" height="18"/>
                                 <buttonCell key="cell" type="check" title="Use Markdown style links" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="6Zp-4z-1KI">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rar-hp-kTf" userLabel="Open Settings Button">
-                                <rect key="frame" x="9" y="35" width="120" height="32"/>
+                                <rect key="frame" x="9" y="52" width="120" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open in Safari" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NmU-K2-tCw">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -137,6 +137,15 @@
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <size key="minSize" width="393" height="10"/>
                                             <size key="maxSize" width="393" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment content="Hello World!">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" usesAppearanceFont="YES"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -154,19 +163,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="VCg-bs-sQ2">
+                                <rect key="frame" x="16" y="40" width="393" height="5"/>
+                            </box>
                         </subviews>
                         <constraints>
                             <constraint firstItem="pci-q0-uhR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="2cQ-ps-Kdz"/>
                             <constraint firstItem="Rar-hp-kTf" firstAttribute="top" secondItem="1TO-rq-lks" secondAttribute="bottom" constant="16" id="4LT-zQ-yw3"/>
-                            <constraint firstItem="622-8j-Wpk" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="5wh-J3-l4M"/>
+                            <constraint firstAttribute="trailing" secondItem="VCg-bs-sQ2" secondAttribute="trailing" constant="16" id="5NN-gd-Rog"/>
+                            <constraint firstItem="622-8j-Wpk" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="8" id="5wh-J3-l4M"/>
                             <constraint firstItem="i2l-zg-Zq5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="6ct-wJ-UD8"/>
+                            <constraint firstItem="VCg-bs-sQ2" firstAttribute="top" secondItem="Rar-hp-kTf" secondAttribute="bottom" constant="16" id="7Ls-Wv-klC"/>
                             <constraint firstItem="622-8j-Wpk" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="82r-Jn-hb5"/>
                             <constraint firstAttribute="bottom" secondItem="i2l-zg-Zq5" secondAttribute="bottom" constant="16" id="BuQ-07-4Cm"/>
                             <constraint firstItem="Rar-hp-kTf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="Cwv-Jo-8i1"/>
+                            <constraint firstItem="i2l-zg-Zq5" firstAttribute="top" secondItem="VCg-bs-sQ2" secondAttribute="bottom" constant="16" id="FmZ-YC-GJh"/>
                             <constraint firstItem="pci-q0-uhR" firstAttribute="top" secondItem="622-8j-Wpk" secondAttribute="bottom" constant="16" id="Nq5-xX-zyD"/>
                             <constraint firstAttribute="trailing" secondItem="i2l-zg-Zq5" secondAttribute="trailing" constant="16" id="Q7p-wP-IFZ"/>
                             <constraint firstItem="1TO-rq-lks" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="WCW-nO-GmR"/>
-                            <constraint firstItem="i2l-zg-Zq5" firstAttribute="top" secondItem="Rar-hp-kTf" secondAttribute="bottom" constant="16" id="s7v-cU-AoR"/>
+                            <constraint firstItem="VCg-bs-sQ2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="enS-gn-vnh"/>
                             <constraint firstItem="1TO-rq-lks" firstAttribute="top" secondItem="pci-q0-uhR" secondAttribute="bottom" constant="16" id="wD7-bY-DCC"/>
                         </constraints>
                     </view>
