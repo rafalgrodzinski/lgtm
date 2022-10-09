@@ -1,0 +1,71 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    width: 300px;
+}
+
+.container {
+    column-count: 3;
+    column-gap: 0px;
+}
+
+.element-small {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    border: 4px solid transparent;
+    opacity: 1;
+}
+
+.element-big {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 1;
+}
+
+.element-big:hover {
+    opacity: 1;
+}
+
+.element-big:hover + img {
+    opacity: 0;
+}
+
+.element-container {
+    position: relative;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-spacer {
+    display: inline;
+    width: 15%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: Helvetica, sans-serif;
+    margin: auto 0 auto 0;
+}
+
+.reload {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-block;
+    width: 15%;
+    padding: 2px 0px 0px 0px;
+}
