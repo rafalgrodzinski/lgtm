@@ -32,11 +32,13 @@ function lgtmImage(url) {
     let imgContainer = document.createElement("div")
     imgContainer.classList.add("element-container")
     // Call content script on on click, pass the url
-    imgContainer.addEventListener("click", e => {
-        chrome.tabs.query({currentWindow: true, active: true}, tabs => {
+    imgContainer.addEventListener("click", async e => {
+        let tabs = await chrome.tabs.query({currentWindow: true, active: true});
+        chrome.tabs.sendMessage(tabs[0].id, url);
+        /*chrome.tabs.query({currentWindow: true, active: true}, tabs => {
             chrome.tabs.sendMessage(tabs[0].id, url)
             window.close()
-        })
+        })*/
     })
 
     // Crete expanded image (when hovering)
