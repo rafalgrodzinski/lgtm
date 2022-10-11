@@ -16,13 +16,21 @@ function focusedTextField() {
 }
 
 function insertUrl(url, textField) {
-    //browser.runtime.sendMessage("settings", response => {
-        let text = /*response.shouldUseMarkdown ?*/ markdownUrl(url) //: url
-        if (/*response.shouldInsert &&*/ textField != null)
+    chrome.storage.sync.get(["shouldInsert", "shouldUseMarkdown"], data => {
+        let shouldInsert = true;
+        if ("shouldInsert" in data) {
+            shouldInsert = data.shouldInsert;
+        }
+        let shouldUseMarkdown = true;
+        if ("shouldUseMarkdown" in data) {
+            shouldUseMarkdown = data.shouldUseMarkdown;
+        }
+        let text = shouldUseMarkdown ? markdownUrl(url) : url
+        if (shouldInsert && textField != null)
             textField.value += text
         else
             window.prompt("Copy LGTM url", text)
-    //})
+    });
 }
 
 function markdownUrl(url) {

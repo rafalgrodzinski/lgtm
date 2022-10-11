@@ -1,20 +1,19 @@
 window.addEventListener("load", event => {
-    let shouldInsert = document.getElementById("shouldInsert");
-    let shouldUseMarkdown = document.getElementById("shouldUseMarkdown");
+    let shouldInsertCheckbox = document.getElementById("shouldInsert");
+    let shouldUseMarkdownCheckbox = document.getElementById("shouldUseMarkdown");
 
-    chrome.storage.sync.get("shouldInsert", data => {
-        let flag = true; // Check by default
+    chrome.storage.sync.get(["shouldInsert", "shouldUseMarkdown"], data => {
+        let shouldInsert = true; // Selected by default
         if ("shouldInsert" in data) {
-            flag = data.shouldInsert
+            shouldInsert = data.shouldInsert
         }
-        shouldInsert.checked = flag;
-    });
-    chrome.storage.sync.get("shouldUseMarkdown", data => {
-        let flag = true; // Check by default
+        shouldInsertCheckbox.checked = shouldInsert;
+
+        let shouldUseMarkdown = true; // Selected by default
         if ("shouldUseMarkdown" in data) {
-            flag = data.shouldUseMarkdown
+            shouldUseMarkdown = data.shouldUseMarkdown
         }
-        shouldUseMarkdown.checked = flag;
+        shouldUseMarkdownCheckbox.checked = shouldUseMarkdown;
     });
 
     shouldInsert.addEventListener("change", event => {
