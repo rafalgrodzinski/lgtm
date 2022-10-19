@@ -36,5 +36,5 @@
         "service_worker": "background.js"
     },
 
-    "permissions": ["https://lgtmoon.herokuapp.com/", "nativeMessaging", "activeTab"]
+    "permissions": ["https://lgtmoon.herokuapp.com/", "nativeMessaging"]
 }
