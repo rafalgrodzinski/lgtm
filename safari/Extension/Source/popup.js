@@ -8,23 +8,20 @@ window.addEventListener("load", event => {
     reload()
 })
 
-function reload() {
+async function reload() {
     // Create new request to fetch lgtm image urls
-    let request = new XMLHttpRequest()
-    request.onload = function() {
-        // Remove existing images
-        let container = document.getElementById("container")
-        container.innerHTML = ""
-        // Extract json from response
-        let response = JSON.parse(this.responseText)
-        response.images.forEach(value => {
-            // Create element for each url
-            let img = lgtmImage(value.url)
-            container.appendChild(img)
-        })
-    }
-    request.open("GET", "https://lgtmoon.herokuapp.com/api/images/random")
-    request.send()
+    let response = await fetch("https://lgtmoon.herokuapp.com/api/images/random");
+    // Extract json from response
+    let data = await response.json();
+    // Remove existing images
+    let container = document.getElementById("container");
+    container.innerHTML = "";
+        
+    // Create element for each url
+    data.images.forEach(value => {
+        let img = lgtmImage(value.url)
+        container.appendChild(img)
+    });
 }
 
 function lgtmImage(url) {
