@@ -20,8 +20,8 @@ function lgtmImage(url) {
     imgContainer.classList.add("element-container");
     // Call content script on on click, pass the url
     imgContainer.addEventListener("click", async event => {
-        let tab = await browser.tabs.getCurrent();
-        browser.tabs.sendMessage(tab.id, url);
+        let tab = await chrome.tabs.getCurrent();
+        chrome.tabs.sendMessage(tab.id, url);
         window.close();
     });
 

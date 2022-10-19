@@ -1,9 +1,9 @@
 function setupSelectionListener() {
-    browser.runtime.onMessage.addListener(url => {
+    chrome.runtime.onMessage.addListener(url => {
         let textField = focusedTextField();
         insertUrl(url, textField);
     });
-};
+}
 
 function focusedTextField() {
     let element = document.activeElement;
@@ -16,12 +16,12 @@ function focusedTextField() {
 }
 
 async function insertUrl(url, textField) {
-    let response = await browser.runtime.sendMessage("settings");
-    let text = response.shouldUseMarkdown ? markdownUrl(url) : url
+    let response = await chrome.runtime.sendMessage("settings");
+    let text = response.shouldUseMarkdown ? markdownUrl(url) : url;
     if (response.shouldInsert && textField != null)
-        textField.value += text
+        textField.value += text;
     else
-        window.prompt("Copy LGTM url", text)
+        window.prompt("Copy LGTM url", text);
 }
 
 function markdownUrl(url) {
