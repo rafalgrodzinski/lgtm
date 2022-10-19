@@ -1,13 +1,3 @@
-window.addEventListener("load", event => {
-    // Reload images on pressing the reload button
-    var button = document.getElementById("reload");
-    button.addEventListener("click", e => {
-        reload();
-    });
-    // Initial images load
-    reload();
-});
-
 async function reload() {
     // Create new request to fetch lgtm image urls
     let response = await fetch("https://lgtmoon.herokuapp.com/api/images/random");
@@ -49,3 +39,13 @@ function lgtmImage(url) {
 
     return imgContainer;
 }
+
+window.addEventListener("load", event => {
+    // Reload images on pressing the reload button
+    var button = document.getElementById("reload");
+    button.addEventListener("click", e => {
+        reload();
+    });
+    // Initial images load
+    reload();
+});

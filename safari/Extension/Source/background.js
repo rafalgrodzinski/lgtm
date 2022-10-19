@@ -1,11 +1,8 @@
-browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     if (message == "settings") {
-        browser.runtime.sendNativeMessage("com.rafalgrodzinski.lgtm",
-                                          "settings",
-                                          response => {
-            sendResponse(response)
-        })
-        return true
+        let response = await browser.runtime.sendNativeMessage("com.rafalgrodzinski.lgtm", "settings");
+        sendResponse(response);
+        return true;
     }
-    return false
+    return false;
 })
