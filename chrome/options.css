@@ -1,0 +1,35 @@
+p {
+    color: #000000;
+    font-size: 1em;
+    font-weight: lighter;
+    font-family: sans-serif;
+}
+
+a {
+    color: #00000080;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.separator {
+    background-color: #00000080;
+    height: 1px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 12px;
+    margin: 12px 0px;
+}

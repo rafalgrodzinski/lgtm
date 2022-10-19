@@ -10,7 +10,7 @@
 		3CE2FB6327D9CB4A00C97216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6227D9CB4A00C97216 /* AppDelegate.swift */; };
 		3CE2FB6F27D9CB4A00C97216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB6E27D9CB4A00C97216 /* ViewController.swift */; };
 		3CE2FB7427D9CB4C00C97216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB7327D9CB4C00C97216 /* Assets.xcassets */; };
-		3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3CE2FB7B27D9CB4C00C97216 /* LGTM Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CE2FB8127D9CB4C00C97216 /* ExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8027D9CB4C00C97216 /* ExtensionHandler.swift */; };
 		3CE2FB8427D9CB4C00C97216 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8327D9CB4C00C97216 /* _locales */; };
 		3CE2FB8627D9CB4C00C97216 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 3CE2FB8527D9CB4C00C97216 /* images */; };
@@ -37,15 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3CE2FB9A27D9CB4C00C97216 /* Embed App Extensions */ = {
+		3CE2FB9A27D9CB4C00C97216 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed App Extensions */,
+				3CE2FB7C27D9CB4C00C97216 /* LGTM Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -68,9 +68,9 @@
 		3CE2FB9327D9CB4C00C97216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE2FB9427D9CB4C00C97216 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
 		B519CEFC27F3346F007D09A3 /* Description.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Description.rtf; sourceTree = "<group>"; };
+		B5618CAF28F5BE6F00979681 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B5E281F427EB31A600EEB3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B5E281F827EB3B9900EEB3C4 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		B5E281FD27EB444A00EEB3C4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5EF719627EECF88009F5F57 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +95,7 @@
 		3CE2FB5627D9CB4A00C97216 = {
 			isa = PBXGroup;
 			children = (
-				B5E281FD27EB444A00EEB3C4 /* README.md */,
+				B5618CAF28F5BE6F00979681 /* README.md */,
 				3CE2FB6127D9CB4A00C97216 /* LGTM */,
 				3CE2FB7F27D9CB4C00C97216 /* Extension */,
 				B5EF719527EECF76009F5F57 /* Shared */,
@@ -169,7 +169,7 @@
 				3CE2FB5B27D9CB4A00C97216 /* Sources */,
 				3CE2FB5C27D9CB4A00C97216 /* Frameworks */,
 				3CE2FB5D27D9CB4A00C97216 /* Resources */,
-				3CE2FB9A27D9CB4C00C97216 /* Embed App Extensions */,
+				3CE2FB9A27D9CB4C00C97216 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -206,7 +206,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					3CE2FB5E27D9CB4A00C97216 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -328,6 +328,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -389,6 +390,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -415,7 +417,8 @@
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Extension/Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -447,7 +450,8 @@
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Extension/Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -484,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -521,6 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
