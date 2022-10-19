@@ -1,12 +1,12 @@
 window.addEventListener("load", event => {
     // Reload images on pressing the reload button
-    var button = document.getElementById("reload")
+    var button = document.getElementById("reload");
     button.addEventListener("click", e => {
-        reload()
-    })
+        reload();
+    });
     // Initial images load
-    reload()
-})
+    reload();
+});
 
 async function reload() {
     // Create new request to fetch lgtm image urls
@@ -19,34 +19,33 @@ async function reload() {
         
     // Create element for each url
     data.images.forEach(value => {
-        let img = lgtmImage(value.url)
-        container.appendChild(img)
+        let img = lgtmImage(value.url);
+        container.appendChild(img);
     });
 }
 
 function lgtmImage(url) {
     // Create container for big and small image
-    let imgContainer = document.createElement("div")
-    imgContainer.classList.add("element-container")
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("element-container");
     // Call content script on on click, pass the url
-    imgContainer.addEventListener("click", e => {
-        browser.tabs.query({currentWindow: true, active: true}, tabs => {
-            browser.tabs.sendMessage(tabs[0].id, url)
-            window.close()
-        })
-    })
+    imgContainer.addEventListener("click", async event => {
+        let tab = await browser.tabs.getCurrent();
+        browser.tabs.sendMessage(tab.id, url);
+        window.close();
+    });
 
     // Crete expanded image (when hovering)
-    let imgBig = document.createElement("img")
-    imgBig.src = url
-    imgBig.classList.add("element-big")
-    imgContainer.appendChild(imgBig)
+    let imgBig = document.createElement("img");
+    imgBig.src = url;
+    imgBig.classList.add("element-big");
+    imgContainer.appendChild(imgBig);
 
     // Create shrunk image (default view)
-    let imgSmall = document.createElement("img")
-    imgSmall.src = url
-    imgSmall.classList.add("element-small")
-    imgContainer.appendChild(imgSmall)
+    let imgSmall = document.createElement("img");
+    imgSmall.src = url;
+    imgSmall.classList.add("element-small");
+    imgContainer.appendChild(imgSmall);
 
-    return imgContainer
+    return imgContainer;
 }
