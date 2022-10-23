@@ -1,8 +1,8 @@
 function setupSelectionListener() {
     chrome.runtime.onMessage.addListener(url => {
-        let textField = focusedTextField();
-        insertUrl(url, textField);
-    });
+        let textField = focusedTextField()
+        insertUrl(url, textField)
+    })
 }
 
 function focusedTextField() {

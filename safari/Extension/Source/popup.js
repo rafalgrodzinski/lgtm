@@ -20,8 +20,8 @@ function lgtmImage(url) {
     imgContainer.classList.add("element-container");
     // Call content script on on click, pass the url
     imgContainer.addEventListener("click", async event => {
-        let tab = await chrome.tabs.getCurrent();
-        chrome.tabs.sendMessage(tab.id, url);
+        let tabs = await chrome.tabs.query({currentWindow: true, active: true});
+        chrome.tabs.sendMessage(tabs[0].id, url);
         window.close();
     });
 
@@ -43,7 +43,7 @@ function lgtmImage(url) {
 window.addEventListener("load", event => {
     // Reload images on pressing the reload button
     var button = document.getElementById("reload");
-    button.addEventListener("click", e => {
+    button.addEventListener("click", event => {
         reload();
     });
     // Initial images load
