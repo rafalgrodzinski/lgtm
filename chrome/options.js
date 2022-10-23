@@ -1,25 +1,24 @@
-window.addEventListener("load", event => {
+window.addEventListener("load", async event => {
     let shouldInsertCheckbox = document.getElementById("shouldInsert");
     let shouldUseMarkdownCheckbox = document.getElementById("shouldUseMarkdown");
 
-    chrome.storage.sync.get(["shouldInsert", "shouldUseMarkdown"], data => {
-        let shouldInsert = true; // Selected by default
-        if ("shouldInsert" in data) {
-            shouldInsert = data.shouldInsert
-        }
-        shouldInsertCheckbox.checked = shouldInsert;
+    let data = await chrome.storage.sync.get(["shouldInsert", "shouldUseMarkdown"]);
+    let shouldInsert = true; // Selected by default
+    if ("shouldInsert" in data) {
+        shouldInsert = data.shouldInsert;
+    }
+    shouldInsertCheckbox.checked = shouldInsert;
 
-        let shouldUseMarkdown = true; // Selected by default
-        if ("shouldUseMarkdown" in data) {
-            shouldUseMarkdown = data.shouldUseMarkdown
-        }
-        shouldUseMarkdownCheckbox.checked = shouldUseMarkdown;
-    });
+    let shouldUseMarkdown = true; // Selected by default
+    if ("shouldUseMarkdown" in data) {
+        shouldUseMarkdown = data.shouldUseMarkdown;
+    }
+    shouldUseMarkdownCheckbox.checked = shouldUseMarkdown;
 
-    shouldInsert.addEventListener("change", event => {
+    shouldInsertCheckbox.addEventListener("change", event => {
         chrome.storage.sync.set({"shouldInsert": event.currentTarget.checked});
     });
-    shouldUseMarkdown.addEventListener("change", event => {
+    shouldUseMarkdownCheckbox.addEventListener("change", event => {
         chrome.storage.sync.set({"shouldUseMarkdown": event.currentTarget.checked});
     });
 });

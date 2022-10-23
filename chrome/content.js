@@ -16,22 +16,20 @@ function focusedTextField() {
 }
 
 async function insertUrl(url, textField) {
-    //chrome.storage.sync.get(["shouldInsert", "shouldUseMarkdown"], data => {
-        let data = await chrome.storage.sync.get(["shouldInsert", "shouldUseMarkdown"])
-        let shouldInsert = true;
-        if ("shouldInsert" in data) {
-            shouldInsert = data.shouldInsert;
-        }
-        let shouldUseMarkdown = true;
-        if ("shouldUseMarkdown" in data) {
-            shouldUseMarkdown = data.shouldUseMarkdown;
-        }
-        let text = shouldUseMarkdown ? markdownUrl(url) : url;
-        if (shouldInsert && textField != null)
-            textField.value += text;
-        else
-            window.prompt("Copy LGTM url", text);
-    //});
+    let data = await chrome.storage.sync.get(["shouldInsert", "shouldUseMarkdown"])
+    let shouldInsert = true;
+    if ("shouldInsert" in data) {
+        shouldInsert = data.shouldInsert;
+    }
+    let shouldUseMarkdown = true;
+    if ("shouldUseMarkdown" in data) {
+        shouldUseMarkdown = data.shouldUseMarkdown;
+    }
+    let text = shouldUseMarkdown ? markdownUrl(url) : url;
+    if (shouldInsert && textField != null)
+        textField.value += text;
+    else
+        window.prompt("Copy LGTM url", text);
 }
 
 function markdownUrl(url) {
