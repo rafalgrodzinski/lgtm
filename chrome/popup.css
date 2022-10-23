@@ -4,6 +4,7 @@
 
 body {
     margin: 0px;
+    font-size: 100%;
 }
 
 .background {
@@ -63,6 +64,7 @@ body {
 }
 
 .title {
+    color: #ffffff;
     font-weight: bold;
     font-size: 2em;
     font-family: Helvetica, sans-serif;
@@ -74,6 +76,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 2em;
+    font-family: system-ui;
     display: flex;
     width: 15%;
     align-items: center;
