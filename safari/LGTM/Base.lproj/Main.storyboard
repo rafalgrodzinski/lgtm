@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -92,10 +92,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="va7-jt-8Xg"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pci-q0-uhR" userLabel="Should Insert Check">
-                                <rect key="frame" x="14" y="126" width="195" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="193" id="4yh-mJ-3Ds"/>
-                                </constraints>
+                                <rect key="frame" x="14" y="126" width="395" height="18"/>
                                 <buttonCell key="cell" type="check" title="Insert into selected text box" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="N6w-au-Jip">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -105,7 +102,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-rq-lks" userLabel="Should Use Markdown Check">
-                                <rect key="frame" x="14" y="94" width="180" height="18"/>
+                                <rect key="frame" x="14" y="94" width="395" height="18"/>
                                 <buttonCell key="cell" type="check" title="Use Markdown style links" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="6Zp-4z-1KI">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -131,7 +128,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" drawsBackground="NO" importsGraphics="NO" verticallyResizable="YES" allowsDocumentBackgroundColorChange="YES" smartInsertDelete="YES" id="mdJ-FW-Io7">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="14"/>
+                                            <rect key="frame" x="0.0" y="-2" width="393" height="16"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,8 +178,10 @@
                             <constraint firstItem="pci-q0-uhR" firstAttribute="top" secondItem="622-8j-Wpk" secondAttribute="bottom" constant="16" id="Nq5-xX-zyD"/>
                             <constraint firstAttribute="trailing" secondItem="i2l-zg-Zq5" secondAttribute="trailing" constant="16" id="Q7p-wP-IFZ"/>
                             <constraint firstItem="1TO-rq-lks" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="WCW-nO-GmR"/>
+                            <constraint firstAttribute="trailing" secondItem="pci-q0-uhR" secondAttribute="trailing" constant="16" id="eM8-u4-Ogx"/>
                             <constraint firstItem="VCg-bs-sQ2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="enS-gn-vnh"/>
                             <constraint firstItem="1TO-rq-lks" firstAttribute="top" secondItem="pci-q0-uhR" secondAttribute="bottom" constant="16" id="wD7-bY-DCC"/>
+                            <constraint firstAttribute="trailing" secondItem="1TO-rq-lks" secondAttribute="trailing" constant="16" id="wan-7i-67R"/>
                         </constraints>
                     </view>
                     <connections>
