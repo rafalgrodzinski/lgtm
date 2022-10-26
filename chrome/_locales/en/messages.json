@@ -4,5 +4,14 @@
     },
     "description": {
         "message": "LGTM (Looks Good To Me) lets you put image urls directly into a text field when you're happy with what you're seeing."
+    },
+    "options_should_insert": {
+        "message": "Insert into selected text box"
+    },
+    "options_should_use_markdown": {
+        "message": "Use Markdown style links"
+    },
+    "options_description": {
+        "message": "<p><span style=\"font-weight: bold;\">LGTM</span> (Looks Good To Me) is a Safari extension that lets you copy (or insert into text fields) image when you're happy with what you're seeing.</p><p>Make sure to enable it and set all required permissions in Safari's extensions tab.</p><p>Full source code is available at <a target=\"_blank\" href=\"https://github.com/rafalgrodzinski/lgtm\">https://github.com/rafalgrodzinski/lgtm</a>.</p>"
     }
 }

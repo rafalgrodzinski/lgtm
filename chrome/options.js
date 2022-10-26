@@ -21,4 +21,14 @@ window.addEventListener("load", async event => {
     shouldUseMarkdownCheckbox.addEventListener("change", event => {
         chrome.storage.sync.set({"shouldUseMarkdown": event.currentTarget.checked});
     });
+
+    // Translations
+    let shouldInsertText = chrome.i18n.getMessage("options_should_insert");
+    document.getElementById("shouldInsertLabel").innerText = shouldInsertText;
+
+    let shouldUseMarkdownText = chrome.i18n.getMessage("options_should_use_markdown");
+    document.getElementById("shouldUseMarkdownLabel").innerText = shouldUseMarkdownText;
+
+    let descriptionText = chrome.i18n.getMessage("options_description");
+    document.getElementById("description").innerHTML = descriptionText;
 });

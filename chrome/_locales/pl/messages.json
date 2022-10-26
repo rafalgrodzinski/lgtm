@@ -4,5 +4,14 @@
     },
     "description": {
         "message": "LGTM (Looks Good To Me) pozwala tobie wkleić bezpośrednio link z obrazkiem jeśli podoba ci się to co widzisz."
+    },
+    "options_should_insert": {
+        "message": "Wkelej w aktywne pole"
+    },
+    "options_should_use_markdown": {
+        "message": "Używaj linków w stylu Markdown"
+    },
+    "options_description": {
+        "message": "<p><span style=\"font-weight: bold;\">LGTM</span> (Looks Good To Me) jest rozszerzeniem przeglądarki które pozwala na wklejenie linku z obrazkiem bezpośrednio do aktywnego pola tekstowego. Link może być zarówno normalny jak i w formacie Markdown.</p><p>Kod źródłowy jest dostępny pod adresem <a target=\"_blank\" href=\"https://github.com/rafalgrodzinski/lgtm\">https://github.com/rafalgrodzinski/lgtm</a>.</p>"
     }
 }
