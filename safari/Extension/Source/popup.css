@@ -27,18 +27,18 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    opacity: 1;
     box-sizing: border-box;
     border: 4px solid transparent;
+    opacity: 1;
 }
 
 .element-big {
     width: 100%;
     height: auto;
     display: block;
-    opacity: 0;
     position: absolute;
     z-index: 1;
+    opacity: 0;
 }
 
 .element-big:hover {
@@ -50,8 +50,8 @@ body {
 }
 
 .element-container {
-    position: relative;
     width: 100px;
+    position: relative;
 }
 
 .title-container {
@@ -60,8 +60,8 @@ body {
 }
 
 .title-spacer {
-    display: inline;
     width: 15%;
+    display: inline;
 }
 
 .title {
