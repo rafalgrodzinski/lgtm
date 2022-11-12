@@ -14,6 +14,11 @@ body {
     margin: 4px;
 }
 
+.container-overflow {
+    height: 500px;
+    overflow: scroll;
+}
+
 .container {
     column-count: 3;
     column-gap: 0px;
@@ -23,7 +28,6 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    margin: auto;
     box-sizing: border-box;
     border: 4px solid transparent;
     opacity: 1;
@@ -31,14 +35,11 @@ body {
 
 .element-big {
     width: 100%;
-    height: auto;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100%;
     display: block;
+    position: absolute;
     z-index: 1;
+    opacity: 0;
 }
 
 .element-big:hover {
@@ -50,6 +51,7 @@ body {
 }
 
 .element-container {
+    display: block;
     position: relative;
 }
 
@@ -59,8 +61,9 @@ body {
 }
 
 .title-spacer {
-    display: inline;
     width: 15%;
+    display: inline;
+
 }
 
 .title {
