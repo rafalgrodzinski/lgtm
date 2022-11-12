@@ -1,8 +1,8 @@
 {
-    "name": {
+    "extension_name": {
         "message": "LGTM"
     },
-    "description": {
+    "extension_description": {
         "message": "LGTM (Looks Good To Me) lets you put image urls into a text field when you're happy with what you're seeing."
     }
 }

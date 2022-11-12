@@ -1,8 +1,8 @@
 {
-    "name": {
+    "extension_name": {
         "message": "LGTM"
     },
-    "description": {
+    "extension_description": {
         "message": "LGTM (Looks Good To Me) permet vous de mettre un url de un image directement si vous aimez ce que vous voyez."
     },
     "options_should_insert": {
