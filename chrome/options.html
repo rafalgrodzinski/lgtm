@@ -8,25 +8,18 @@
         <div class="options">
             <div>
                 <input type="checkbox" id="shouldInsert" />
-                <label for="shouldInsert">Insert into selected text box</label>
+                <label for="shouldInsert" id="shouldInsertLabel"></label>
             </div>
         
             <div>
                 <input type="checkbox" id="shouldUseMarkdown" />
-                <label for="shouldUseMarkdown">Use Markdown style links</label>
+                <label for="shouldUseMarkdown" id="shouldUseMarkdownLabel"></label>
             </div>
         </div>
 
         <div class="separator"></div>
 
-        <p>
-            <span style="font-weight: bold;">LGTM</span> (Looks Good To Me) is a Safari extension that lets you copy (or insert into text fields) image when you're happy with what you're seeing.
-        </p>
-        <p>
-            Make sure to enable it and set all required permissions in Safari's extensions tab.
-        </p>
-        <p>
-            Full source code is available at <a target="_blank" href="https://github.com/rafalgrodzinski/lgtm">https://github.com/rafalgrodzinski/lgtm</a>.
-        </p>
+        <div id="description">
+        </div>
     </body>
 </html>

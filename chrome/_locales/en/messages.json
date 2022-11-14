@@ -3,6 +3,15 @@
         "message": "LGTM"
     },
     "extension_description": {
-        "message": "LGTM (Looks Good To Me) images downloader"
+        "message": "LGTM (Looks Good To Me) lets you put image urls into a text field when you're happy with what you're seeing."
+    },
+    "options_should_insert": {
+        "message": "Insert into selected text box"
+    },
+    "options_should_use_markdown": {
+        "message": "Use Markdown style links"
+    },
+    "options_description": {
+        "message": "<p><span style=\"font-weight: bold;\">LGTM</span> (Looks Good To Me) is a browser extension that lets you copy (or insert into text fields) image when you're happy with what you're seeing.</p><p>Full source code is available at <a target=\"_blank\" href=\"https://github.com/rafalgrodzinski/lgtm\">https://github.com/rafalgrodzinski/lgtm</a>.</p>"
     }
 }

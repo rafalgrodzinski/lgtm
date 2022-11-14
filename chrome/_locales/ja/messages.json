@@ -1,0 +1,17 @@
+{
+    "extension_name": {
+        "message": "LGTM"
+    },
+    "extension_description": {
+        "message": "見えることがすきなら、LGTM (Looks Good To Me)のおかげで直接にイメージのリンクを付けれるようになります。"
+    },
+    "options_should_insert": {
+        "message": "選択したフィーるどに入れます"
+    },
+    "options_should_use_markdown": {
+        "message": "Markdown形リンクを使います"
+    },
+    "options_description": {
+        "message": "<p><span style=\"font-weight: bold;\">LGTM</span> (Looks Good To Me)はイメージのリンクを選択したテクストフィールドに直接にペストできるようになるブラウザー拡張としてです。</p><p>ソースコードを下記ページで入手できます<a target=\"_blank\" href=\"https://github.com/rafalgrodzinski/lgtm\">https://github.com/rafalgrodzinski/lgtm</a>。</p>"
+    }
+}

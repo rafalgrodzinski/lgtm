@@ -1,0 +1,17 @@
+{
+    "extension_name": {
+        "message": "LGTM"
+    },
+    "extension_description": {
+        "message": "LGTM (Looks Good To Me) permet vous de mettre un url de un image directement si vous aimez ce que vous voyez."
+    },
+    "options_should_insert": {
+        "message": "Insérer dans un champ de texte sélecté"
+    },
+    "options_should_use_markdown": {
+        "message": "Utiliser links dans un style Markdown"
+    },
+    "options_description": {
+        "message": "<p><span style=\"font-weight: bold;\">LGTM</span> (Looks Good To Me) est un extension de browser que permet vous de mettre lien d'image directement dans un champ de texte sélecté. Vous pouvez utiliser liens normals ainsi que dans un style Markdown.</p><p>Le code source est disponible dans <a target=\"_blank\" href=\"https://github.com/rafalgrodzinski/lgtm\">https://github.com/rafalgrodzinski/lgtm</a>.</p>"
+    }
+}
